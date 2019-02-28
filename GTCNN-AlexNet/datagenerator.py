@@ -11,8 +11,8 @@ VGG_MEAN = tf.constant([123.68, 116.779, 103.939], dtype=tf.float32)
 
 class ImageDataGenerator(object):
     def __init__(self, images, labels, batch_size, num_classes, mode,output_buffer_size,image_format, shuffle=True,buffer_size=1000):
-        self.img_paths = images # [P1,P2]
-        self.labels = labels # [1,2]
+        self.img_paths = images
+        self.labels = labels 
         self.data_size = len(self.labels)        
         self.num_classes = num_classes
         self.image_format = image_format
